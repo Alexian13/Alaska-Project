@@ -37,7 +37,7 @@
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
         <!-- lokasi header di sini -->
-        <?=$content?>
+        <?=$header?>
         <!-- partial -->
         <div class="main-panel">
           <?=$content?>
