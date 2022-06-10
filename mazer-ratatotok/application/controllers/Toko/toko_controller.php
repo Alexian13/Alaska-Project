@@ -5,6 +5,6 @@ class toko_controller extends MY_Controller {
 
     public function toko()
     {
-        $this->render('Toko/tokoview');
+        $this->load->view('Toko/toko_view');
     }
 }
