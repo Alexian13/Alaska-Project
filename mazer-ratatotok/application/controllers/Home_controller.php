@@ -7,7 +7,9 @@ class Home_controller extends MY_Controller {
         $this->render('dashboard/v_dashboard',[]);
 	}
 
-	public function test(){
-		
-	}
+    public function toko()
+    {
+        $this->as->tambahAsetSimrs();
+        redirect('Toko/tokoview');
+    }
 }
