@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class toko_controller extends MY_Controller {
+class Toko_controller extends MY_Controller {
 
-    public function toko()
+    public function getViewToko()
     {
-        $this->load->view('Toko/toko_view');
+        $this->render('toko/toko_view',[]);
     }
 }

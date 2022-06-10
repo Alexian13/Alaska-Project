@@ -61,7 +61,7 @@
     </li>
     <br>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="<?=base_url('Toko/TokoController/getViewToko'); ?>">
+    <a class="nav-link" href="<?=base_url('toko/Toko_controller/getViewToko'); ?>">
         <span class="menu-icon">
         <i class="mdi mdi-speedometer"></i>
         </span>
