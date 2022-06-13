@@ -1,10 +1,10 @@
 <div class="col-12 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
-      <h4 class="card-title"> Masukkan Nama Barang</h4>
+      <h4 class="card-title"> Master Data Barang</h4>
       <form class="forms-sample">
         <div class="form-group">
-          <label for="exampleInputName1">Nam Barang</label>
+          <label for="exampleInputName1">Nama Barang</label>
           <input type="text" class="form-control" id="exampleInputName1" placeholder="Masukkan Nama Barang">
         </div>
         <div class="form-group">
