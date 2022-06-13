@@ -7,7 +7,7 @@
             <span class="count bg-success"></span>
         </div>
         <div class="profile-name">
-            <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
+            <h5 class="mb-0 font-weight-normal">Toko Barang</h5>
             <span>Gold Member</span>
         </div>
         </div>
@@ -52,7 +52,7 @@
     <span class="nav-link">Navigation</span>
     </li>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="<?=base_url('dashboard/Dashboard_controller/getViewDashboard'); ?>">
         <span class="menu-icon">
         <i class="mdi mdi-speedometer"></i>
         </span>
@@ -70,7 +70,7 @@
     </li>
     <br>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="<?=base_url('barang/Barang_controller/getViewBarang'); ?>">
         <span class="menu-icon">
         <i class="mdi mdi-speedometer"></i>
         </span>
