@@ -70,7 +70,7 @@
     </li>
     <br>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="<?=base_url('barang/Barang_controller/getViewBarang'); ?>">
+    <a class="nav-link" href="<?=base_url('master/C_barang/getViewBarang'); ?>">
         <span class="menu-icon">
         <i class="mdi mdi-speedometer"></i>
         </span>

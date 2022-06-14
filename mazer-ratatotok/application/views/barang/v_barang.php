@@ -2,22 +2,22 @@
   <div class="card">
     <div class="card-body">
       <h4 class="card-title"> Masukkan Nama Barang</h4>
-      <form class="forms-sample">
+      <form role="form" method="post" action="<?php echo base_url("master/C_barang/tambahBarang/") ?>">
         <div class="form-group">
-          <label for="exampleInputName1">Nam Barang</label>
-          <input type="text" class="form-control" id="exampleInputName1" placeholder="Masukkan Nama Barang">
+          <label for="exampleInputName1">Nama Barang</label>
+          <input type="text" class="form-control" id="exampleInputName1" name="nama_barang" placeholder="Masukkan Nama Barang">
         </div>
         <div class="form-group">
           <label for="exampleInputName1">Jumlah Barang</label>
-          <input type="text" class="form-control" id="exampleInputName1" placeholder="Jumlah Barang">
+          <input type="text" class="form-control" id="exampleInputName1" name="jumlah_barang" placeholder="Jumlah Barang">
         </div>
         <div class="form-group">
           <label for="exampleInputName1"> Stok </label>
-          <input type="text" class="form-control" id="exampleInputName1" placeholder="Stok Barang">
+          <input type="text" class="form-control" id="exampleInputName1" name="stok_barang" placeholder="Stok Barang">
         </div>
         <div class="form-group">
           <label for="exampleInputName1">Harga Barang </label>
-          <input type="text" class="form-control" id="exampleInputName1" placeholder="Harga Barang">
+          <input type="number" class="form-control" id="exampleInputName1" name="harga_barang" placeholder="Harga Barang">
         </div>
         <!-- <div class="form-group">
           <label>File upload</label>
@@ -42,7 +42,7 @@
       </form>
     </div>
     
-    <!-- <div class="card-body">
+    <div class="card-body">
       <h4 class="card-title">Inverse table</h4>
       <p class="card-description"> Add class <code>.table-dark</code>
       </p>
@@ -50,58 +50,74 @@
         <table class="table table-dark">
           <thead>
             <tr>
-              <th> # </th>
-              <th> First name </th>
-              <th> Amount </th>
-              <th> Deadline </th>
+              <th>Nama Barang</th>
+              <th>Jumlah Barang</th>
+              <th>Stok</th>
+              <th>Harga Barang</th>
+              <th>Opsi</th>
             </tr>
           </thead>
           <tbody>
+          <?php foreach ($data_barang as $data) {  ?>
             <tr>
-              <td> 1 </td>
-              <td> Herman Beck </td>
-              <td> $ 77.99 </td>
-              <td> May 15, 2015 </td>
+              <td><?php echo $data->nama_barang; ?></td>
+              <td><?php echo $data->jumlah_barang; ?></td>
+              <td><?php echo $data->stok_barang; ?></td>
+              <td><?php echo $data->harga_barang; ?></td>
+              <td>
+
+              <!-- <button class="btn btn-danger delete_this btn-xs" urls="<?php echo base_url("master/C_barang/deleteBarang/").$data->id_barang ?>" idp="<?php echo $data->id_barang; ?>" >Hapus <span class="glyphicon glyphicon-trash"></span></button> -->
+             
+              <button class="btn btn-danger del btn-xs" urls="<?php echo base_url("master/C_barang/deleteBarang/").$data->id_barang ?>" idp="<?php echo $data->id_barang; ?>" >Hapus <span class="glyphicon glyphicon-trash"></span></button>
+              </td>
             </tr>
-            <tr>
-              <td> 2 </td>
-              <td> Messsy Adam </td>
-              <td> $245.30 </td>
-              <td> July 1, 2015 </td>
-            </tr>
-            <tr>
-              <td> 3 </td>
-              <td> John Richards </td>
-              <td> $138.00 </td>
-              <td> Apr 12, 2015 </td>
-            </tr>
-            <tr>
-              <td> 4 </td>
-              <td> Peter Meggik </td>
-              <td> $ 77.99 </td>
-              <td> May 15, 2015 </td>
-            </tr>
-            <tr>
-              <td> 5 </td>
-              <td> Edward </td>
-              <td> $ 160.25 </td>
-              <td> May 03, 2015 </td>
-            </tr>
-            <tr>
-              <td> 6 </td>
-              <td> John Doe </td>
-              <td> $ 123.21 </td>
-              <td> April 05, 2015 </td>
-            </tr>
-            <tr>
-              <td> 7 </td>
-              <td> Henry Tom </td>
-              <td> $ 150.00 </td>
-              <td> June 16, 2015 </td>
-            </tr>
+           
+            <?php } ?>
           </tbody>
         </table>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
+
+<!-- <script>
+/// fungsi scrip\\\
+$(".delete_this").click(function(e) {
+            e.preventDefault();
+            if (confirm('Apakah anda yakin?')) {
+                var url = $(this).attr('url');
+                var id = $(this).attr('id');
+                $.post(url, {
+                    id: id
+                });
+                $(this).closest("tr").fadeOut();
+
+            }
+        });
+
+</script> -->
+
+
+<script type="text/javascript">
+  
+  $(".del").click(function(){
+    var urls = $(this).attr('urls');
+   // console.log(urls);
+    var id = $(this).attr('idp');
+    $.post( urls, { id: id } );
+    $(this).closest("tr").fadeOut();
+    //window.location
+  });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+             $('#dt_table').dataTable( {
+            "language": {
+                "url": "<?php echo site_url("assets/js/indonesian.lang"); ?>"
+            }
+        } );
+    } );
+ </script>
+
