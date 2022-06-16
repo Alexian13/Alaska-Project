@@ -44,7 +44,7 @@
     </div>
     
     <div class="card-body">
-      <h4 class="card-title"> Barang Yang Di Masukkan</h4>
+      <h4 class="card-title"> Barang Yang Tersedia</h4>
       <!-- <p class="card-description"> Add class <code>.table-dark</code>
       </p> -->
       <div class="table-responsive">

@@ -8,7 +8,6 @@
         </div>
         <div class="profile-name">
             <h5 class="mb-0 font-weight-normal">Toko Barang</h5>
-            <span>Gold Member</span>
         </div>
         </div>
         <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -61,7 +60,7 @@
     </li>
     <br>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="<?=base_url('toko/Toko_controller/getViewToko'); ?>">
+    <a class="nav-link" href="<?=base_url('master/C_login/getLogin'); ?>">
         <span class="menu-icon">
         <i class="mdi mdi-speedometer"></i>
         </span>
@@ -77,6 +76,7 @@
         <span class="menu-title">Barang</span>
     </a>
     </li>
+    <br>
     <!-- <li class="nav-item menu-items">
     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
         <span class="menu-icon">
@@ -148,6 +148,7 @@
         <span class="menu-icon">
         <i class="mdi mdi-file-document-box"></i>
         </span>
+        <br>
         <span class="menu-title">Documentation</span>
     </a>
     </li>

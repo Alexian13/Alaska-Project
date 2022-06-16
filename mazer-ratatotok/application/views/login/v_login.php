@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Web Belajar</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
@@ -24,15 +24,15 @@
         <div class="row w-100 m-0">
           <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
             <div class="card col-lg-4 mx-auto">
-              <div class="card-body px-5 py-5">
+              <div class="card-body px-1 py-1">
                 <h3 class="card-title text-left mb-3">Login</h3>
                 <form>
                   <div class="form-group">
-                    <label>Username or email *</label>
+                    <label>Username</label>
                     <input type="text" class="form-control p_input">
                   </div>
                   <div class="form-group">
-                    <label>Password *</label>
+                    <label>Password</label>
                     <input type="text" class="form-control p_input">
                   </div>
                   <div class="form-group d-flex align-items-center justify-content-between">

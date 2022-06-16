@@ -28,11 +28,12 @@
         public function deleteBarang()
 		{
 			$id = $this->input->post('id');
+			var_dump('coba');
 			$data = array(	
 				'flag_active' => 0,
 			);
-			$this->db->where('mst_barang', $id);
-			$this->db->update('id_barang', $data);
+			$this->db->where('id_barang', $id);
+			$this->db->update('mst_barang', $data);
 		}
 
     }
