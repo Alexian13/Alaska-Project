@@ -9,16 +9,15 @@ class C_barang extends MY_Controller {
         $this->load->model('master/M_barang', 'mbar');
         // $this->load->model('M_laporan', 'ml');
         // $this->load->library('mylib');
-        // $this->load->library('upload');
+        $this->load->library('upload');
     }
 
     public function getViewBarang()
     {
         $data['data_barang'] = $this->mbar->viewBarang();
+        // var_dump('data_barang');
         $this->render('barang/v_barang', $data);
     }
-
-    
     public function tambahBarang()
     {
         $this->mbar->tambahBarang();

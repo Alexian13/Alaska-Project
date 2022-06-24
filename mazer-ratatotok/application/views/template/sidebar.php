@@ -3,7 +3,7 @@
     <div class="profile-desc">
         <div class="profile-pic">
         <div class="count-indicator">
-            <img class="img-xs rounded-circle " src="<?php echo base_url() ?>assets/images/faces/face15.jpg" alt="">
+            <img class="img-xs rounded-circle " src="<?php echo base_url() ?>assets/images/faces/face26.jpg" alt="">
             <span class="count bg-success"></span>
         </div>
         <div class="profile-name">
@@ -47,9 +47,7 @@
         </div>
     </div>
     </li>
-    <li class="nav-item nav-category">
-    <span class="nav-link">Navigation</span>
-    </li>
+    <br>
     <li class="nav-item menu-items">
     <a class="nav-link" href="<?=base_url('dashboard/Dashboard_controller/getViewDashboard'); ?>">
         <span class="menu-icon">
@@ -58,16 +56,14 @@
         <span class="menu-title">Dashboard</span>
     </a>
     </li>
-    <br>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="<?=base_url('master/C_login/getLogin'); ?>">
+    <a class="nav-link" href="<?=base_url('toko/Toko_controller/getViewToko'); ?>">
         <span class="menu-icon">
         <i class="mdi mdi-speedometer"></i>
         </span>
         <span class="menu-title">Toko</span>
     </a>
     </li>
-    <br>
     <li class="nav-item menu-items">
     <a class="nav-link" href="<?=base_url('master/C_barang/getViewBarang'); ?>">
         <span class="menu-icon">
@@ -144,12 +140,12 @@
     </div>
     </li>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
+    <a class="nav-link" href='<?=base_url('master/C_login/getLogin'); ?>'>
         <span class="menu-icon">
         <i class="mdi mdi-file-document-box"></i>
         </span>
         <br>
-        <span class="menu-title">Documentation</span>
+        <span class="menu-title">Logout</span>
     </a>
     </li>
 </ul>

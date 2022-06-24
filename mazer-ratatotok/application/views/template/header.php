@@ -151,7 +151,7 @@
         <li class="nav-item dropdown">
         <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
             <div class="navbar-profile">
-            <img class="img-xs rounded-circle" src="<?php echo base_url() ?>assets/images/faces/face15.jpg" alt="">
+            <img class="img-xs rounded-circle" src="<?php echo base_url() ?>assets/images/faces/face26.jpg" alt="">
             <p class="mb-0 d-none d-sm-block navbar-profile-name"> Toko Barang</p>
             <i class="mdi mdi-menu-down d-none d-sm-block"></i>
             </div>

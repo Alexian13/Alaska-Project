@@ -66,9 +66,6 @@
               <td><?php echo $data->stok_barang; ?></td>
               <td><?php echo $data->harga_barang; ?></td>
               <td>
-
-              <!-- <button class="btn btn-danger delete_this btn-xs" urls="<?php echo base_url("master/C_barang/deleteBarang/").$data->id_barang ?>" idp="<?php echo $data->id_barang; ?>" >Hapus <span class="glyphicon glyphicon-trash"></span></button> -->
-             
               <button class="btn btn-danger del btn-xs" urls="<?php echo base_url("master/C_barang/deleteBarang/").$data->id_barang ?>" idp="<?php echo $data->id_barang; ?>" >Hapus <span class="glyphicon glyphicon-trash"></span></button>
               </td>
             </tr>
@@ -80,38 +77,6 @@
     </div>
   </div>
 </div>
-
-<!-- <script>
-/// fungsi scrip\\\
-$(".delete_this").click(function(e) {
-            e.preventDefault();
-            if (confirm('Apakah anda yakin?')) {
-                var url = $(this).attr('url');
-                var id = $(this).attr('id');
-                $.post(url, {
-                    id: id
-                });
-                $(this).closest("tr").fadeOut();
-
-            }
-        });
-
-</script> -->
-
-
-<script type="text/javascript">
-  
-  $(".del").click(function(){
-    var urls = $(this).attr('urls');
-   // console.log(urls);
-    var id = $(this).attr('idp');
-    $.post( urls, { id: id } );
-    $(this).closest("tr").fadeOut();
-    //window.location
-  });
-</script>
-
-
 <script type="text/javascript">
     $(document).ready(function() {
              $('#dt_table').dataTable( {
@@ -121,4 +86,16 @@ $(".delete_this").click(function(e) {
         } );
     } );
  </script>
+ 
+<script type="text/javascript">
+  
+  $(".del").click(function(){
+    var urls = $(this).attr('urls');
+    console.log(urls);
+    var id = $(this).attr('idp');
+    $.post( urls, { id: id } );
+    $(this).closest("tr").fadeOut();
+    window.location
+  });
+</script>
 

@@ -28,7 +28,6 @@
         public function deleteBarang()
 		{
 			$id = $this->input->post('id');
-			var_dump('coba');
 			$data = array(	
 				'flag_active' => 0,
 			);
