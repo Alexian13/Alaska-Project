@@ -66,18 +66,73 @@
               <td><?php echo $data->stok_barang; ?></td>
               <td><?php echo $data->harga_barang; ?></td>
               <td>
-              <button class="btn btn-danger del btn-xs" urls="<?php echo base_url("master/C_barang/deleteBarang/").$data->id_barang ?>" idp="<?php echo $data->id_barang; ?>" >Hapus <span class="glyphicon glyphicon-trash"></span></button>
+              
+              <div class="btn-group">
+              <a url="<?php echo base_url("master/C_barang/deletebarang") ?>" id="<?php echo $data->id_barang ?>" href="#" class="btn btn-sm btn-danger delete_this" title="hapus data"><i class="glyphicon glyphicon-trash"></i></a>
+              <a data-toggle="modal" data-target="#editModal" class="addData btn btn-info btn-xs" 
+              data-id="<?php echo $data->id_barang  ?>"
+              data-nm_posisi="<?php echo $data->nama_barang ?>"
+              data-ket_posisi="<?php echo $data->harga_barang ?>"
+              > Edit <i class="fa fa-pencil"></i></a> 
+              </div>
               </td>
-            </tr>
-           
             <?php } ?>
           </tbody>
         </table>
+        <?php if(!$data_barang){ ?>
+        <hr> 
+        <div align="center"><label >User Tidak Ditemukan </label></div> 
+
+        <?php } ?>
+        </div><!-- end col-lg-21 -->
+        </div><!-- end row -->
       </div>
+                          
     </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+
+    </div>
+                      
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+ 
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+      <h3 class="modal-title" id="lineModalLabel">Edit Informasi</h3>
+    </div>
+    <form role="form" method="post" action="<?php echo base_url("simrs/C_simrs_aset/ubah_Aset") ?>">
+    <input type="hidden" name="nm_mst_aset" id="id_mst_aset">
+      <div class="modal-body">
+          <!-- content goes here -->
+          
+            <div class="form-group">
+              <label>Nama Aset</label>
+              <input class="form-control" id="id_mst_aset" type="text" name="nm_mst_aset" placeholder="Isi Perubahan" value="" required>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="submit" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
   </div>
 </div>
-<script type="text/javascript">
+
+
+ <script type="text/javascript">
     $(document).ready(function() {
              $('#dt_table').dataTable( {
             "language": {
@@ -86,16 +141,21 @@
         } );
     } );
  </script>
- 
-<script type="text/javascript">
+
+ <script type="text/javascript">
   
-  $(".del").click(function(){
-    var urls = $(this).attr('urls');
-    console.log(urls);
-    var id = $(this).attr('idp');
-    $.post( urls, { id: id } );
-    $(this).closest("tr").fadeOut();
-    window.location
-  });
+  $(".delete_this").click(function(e) {
+            e.preventDefault();
+            if (confirm('Apakah anda yakin?')) {
+                var url = $(this).attr('url');
+                var id = $(this).attr('id');
+                $.post(url, {
+                    id: id
+                });
+                $(this).closest("tr").fadeOut();
+
+            }
+        });
+  
 </script>
 

@@ -49,19 +49,11 @@
     </li>
     <br>
     <li class="nav-item menu-items">
-    <a class="nav-link" href="<?=base_url('dashboard/Dashboard_controller/getViewDashboard'); ?>">
+    <a class="nav-link" href="<?=base_url('dashboard/dashboard/getViewDashboard'); ?>">
         <span class="menu-icon">
         <i class="mdi mdi-speedometer"></i>
         </span>
         <span class="menu-title">Dashboard</span>
-    </a>
-    </li>
-    <li class="nav-item menu-items">
-    <a class="nav-link" href="<?=base_url('toko/Toko_controller/getViewToko'); ?>">
-        <span class="menu-icon">
-        <i class="mdi mdi-speedometer"></i>
-        </span>
-        <span class="menu-title">Toko</span>
     </a>
     </li>
     <li class="nav-item menu-items">
@@ -128,7 +120,7 @@
         </span>
         <span class="menu-title">User Pages</span>
         <i class="menu-arrow"></i> -->
-    </a>
+    <!-- </a>
     <div class="collapse" id="auth">
         <ul class="nav flex-column sub-menu">
         <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
@@ -138,13 +130,13 @@
         <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
         </ul>
     </div>
-    </li>
+    </li> -->
     <li class="nav-item menu-items">
-    <a class="nav-link" href='<?=base_url('master/C_login/getLogin'); ?>'>
+    <a class="nav-link" href=''>
+        <!-- <?=base_url('dashboard/v_dashboard'); ?> -->
         <span class="menu-icon">
         <i class="mdi mdi-file-document-box"></i>
         </span>
-        <br>
         <span class="menu-title">Logout</span>
     </a>
     </li>

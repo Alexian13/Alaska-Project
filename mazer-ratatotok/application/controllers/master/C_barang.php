@@ -15,7 +15,6 @@ class C_barang extends MY_Controller {
     public function getViewBarang()
     {
         $data['data_barang'] = $this->mbar->viewBarang();
-        // var_dump('data_barang');
         $this->render('barang/v_barang', $data);
     }
     public function tambahBarang()
